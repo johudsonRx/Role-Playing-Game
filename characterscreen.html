@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose Character</title>
+	
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" type="text/css" href="character.css">
+  
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+</head>
+
+
+<div class="jumbotron">
+ <div class="container-fluid">
+
+ <div class="row">
+  <div class="col-sm-2">
+
+  </div>
+  <div class="col-sm-8">
+   <h1 id="choose">Choose your Attacker</h1>
+  </div>
+  <div class="col-sm-2">
+
+  </div>
+<!-- Characters for the game -->
+  <div class="row">
+   <div class="col-sm-3">
+<button class="character" id="sage"><img src="images\oldluke.jpg.jpg" id ="oldluke"><h5>Luke Skywalker</h5></button>
+</div>
+<div class="col-sm-3">
+  <button class="character" id="padawon"><img src="images\rey.jpg.jpg" id="rey"><h5>Rey</h5></button>
+</div>
+<div class="col-sm-3">
+   <button class="character" id="sithlord"><img src="images\vader.jpg.jpg" id="vader">
+   <h5>Darth Vader</h5></button>
+ </div>
+ <div class="col-sm-3">
+    <button class="character" id="apprentice"><img src="images\ren.jpg.jpg" id="ren">
+  <h5>Kylo Ren</h5></button>
+ </div>
+ </div>
+
+<div class="row">
+ <div class="col-sm-6">
+ <h1 class="choice">Your Character</h1>
+
+ <div id="attacker">
+
+ </div>
+
+  
+ </div>
+ <div class="col-sm-6">
+<h1 class="choice"> Defender</h1>
+  <div id="defender">
+
+ </div>
+
+ </div>
+ </div>
+
+ </div>
+
+<script type="text/javascript">
+// Javascript function wrapping everything as the DOM loads.
+$(document).ready(function(){
+
+  // Characters
+
+var lukeSkywalker;
+var rey;
+var darthVader;
+var kyloRen;
+
+// To move characters to other regions
+var clickMoveAttacker;
+var clickMoveDefender;
+var attacker;
+
+    clickMoveAttacker = $(".character").one('click',function(){
+     $(this).data('clicked', true);
+
+     
+     lukeSkywalker = $("#sage");
+     rey = $("#padawon");
+     darthVader = $("#sithlord");
+     kyloRen = $("#apprentice");
+    attacker = $("#attacker");
+     
+     document.getElementById('choose').innerHTML = "Choose your Defender";
+     
+     
+
+     if($('#sage').data('clicked')) {
+     $("#attacker").append(lukeSkywalker);
+  
+     // alert('yes');
+}
+    else if($('#padawon').data('clicked')) {
+     $("#attacker").append(rey);
+    
+    // $("#sage, #sithlord, #apprentice").prop("disabled", true);
+     
+ }
+
+    else if($('#sithlord').data('clicked')) {
+     $("#attacker").append(darthVader);
+     // $("#sage, #padawon, #apprentice").prop("disabled", true);
+     
+ }
+
+    else if($('#apprentice').data('clicked')) {
+     $("#attacker").append(kyloRen);
+      // $("#sage, #padawon, #sithlord").prop("disabled",true);
+       }
+
+clickMoveDefender();
+
+  });
+
+clickMoveDefender = $(".character").click(function(){
+     $(this).data('clicked', true);
+
+
+     lukeSkywalker = $("#sage");
+     rey = $("#padawon");
+     darthVader = $("#sithlord");
+     kyloRen = $("#apprentice");
+     attacker = $("#attacker");
+
+      // clickMoveAttacker();
+
+     
+    if($('#sage').data('clicked')) {
+     $("#defender").append(lukeSkywalker);
+  
+     // alert('yes');
+}
+    else if($('#padawon').data('clicked')) {
+     $("#defender").append(rey);
+    
+    // $("#sage, #sithlord, #apprentice").prop("disabled", true);
+     
+ }
+
+    else if($('#sithlord').data('clicked')) {
+     $("#defedner").append(darthVader);
+     // $("#sage, #padawon, #apprentice").prop("disabled", true);
+     
+ }
+
+    else if($('#apprentice').data('clicked')) {
+     $("#defender").append(kyloRen);
+      // $("#sage, #padawon, #sithlord").prop("disabled",true);
+       }
+     
+  
+
+    });
+
+    console.log(clickMoveAttacker);
+    // console.log(clickMoveDefender);
+
+
+});
+
+</script>
+
+
+</body>
+</html>

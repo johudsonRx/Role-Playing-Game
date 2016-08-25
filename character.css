@@ -1,0 +1,46 @@
+.jumbotron{
+  background-image: url('https://31.media.tumblr.com/6f4050180fa68ebddfda19ae2b88dcf4/tumblr_inline_n3lpz2h3Tc1sdqmk9.jpg');
+  background-size: cover;
+  background-position: center ;
+  background-image: no-repeat;
+  height: 60pc;
+ }
+
+img {
+    width: 10pc;
+    height: 11pc;
+}
+
+.choice {
+    position: relative;
+    top: 5pc;
+    left:9pc;
+    color: white;
+}
+
+h1 {
+    position: relative;
+    top: -4pc;
+    color: white;
+}
+
+button {
+    position: relative;
+    top: -4pc;
+}
+
+.choice {
+    position: relative;
+    top: -3pc;
+    color: white;
+}
+
+#attacker {
+	position: relative;
+    left: 16pc;
+}
+
+#defender {
+	position: relative;
+    right: -12pc;
+}
