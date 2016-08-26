@@ -1,0 +1,86 @@
+
+
+.jumbotron{
+  background-image: url('http://www.gifbin.com/bin/042009/1240324074_travelling-through-space.gif');
+  background-size: cover;
+  background-position: center ;
+  background-image: no-repeat;
+  height: 50pc;
+}
+
+  #characterchoice {
+        position: relative;
+    top: -22px;
+    color: white;
+  }
+
+.character {
+  position: relative;
+  top: 6pc;
+}
+
+img {
+    position: relative;
+    left: 12pc;
+}
+
+button {
+    color: #FFCC00;
+    background-color: transparent;
+    border-color: #FFCC00;
+    position: relative;
+    left: 14pc;
+    top: 3pc;
+    padding: 15px;
+    font-size: larger;
+    border: solid;
+
+}
+
+strong {
+  color: #FFCC00;
+ position: relative;
+    left: 10pc;
+}
+
+h3 {
+  color: #FFCC00;
+  position: relative;
+    left: 1pc;
+}
+
+#oldluke {
+	height: 13pc;
+    width: 10pc;
+    top: 0pc;
+    position: relative;
+    border:22px solid;
+    border-color: green;
+}
+
+#rey {
+  height: 13pc;
+    width: 10pc;
+    top: 0;
+    position: relative;
+    border: 22px solid;
+    border-color: green;
+}
+
+#vader {
+	height: 13pc;
+    width: 10pc;
+    top: 0pc;
+    position: relative;
+    border: 22px solid;
+    border-color: red;
+}
+
+#ren {
+  height: 13pc;
+    width: 10pc;
+    top: 0pc;
+    position: relative;
+    border: 22px solid;
+    border-color: red;
+}

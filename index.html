@@ -1,77 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="utf-8">
-	<title>NFL Hangman</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>The Force Awakens</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
 
 </head>
+<!-- Pseudo Code for Force Awakens RPG
+1. Need button classes or ids that link up to the characters {
+  -Once an id of a character is clicked, he goes into an "enemies available to attack screen". 
+  -This button will be an entire element that updates how many hp points were taken away after you're attacked - Will have to program a path for characters to reach with attack damage. 
+} 
+2. Find a way to move defenders to middle of the screen after an attacker is chosen - See Captain Planet
+3. Once a defender is chosen, he moves to a defender position - See Capatain Planet.
+4. Game needs to keep track of all attack power at all times 
+-->
+
+
 <body>
-    <div class="container">
-     <div class="row">
-      <div class="col-sm-4">
-      
-       
-       </div>
-     <div class="col-sm-8">
-     <img src="http://static.nfl.com/static/content//public/static/img/navigation/shields/header-shield.png" style="left:-8pc; position: relative;top: 8pc;">
-     <h1 style="font-size: 72px">NFL Hangman</h1>
-     <h3 style="font-size: 35px">By Josh Hudson</h3>
-     <p id="letterline"  style="font-size: 50px;"></p>
-     
-     <p id="guesses">Guesses </p>
-     <p id="lettersguessed"></p>
-     </div>
-     
+ 
+ <div class="jumbotron">
+ <div class="container-fluid">
+  
+  <div class="row">
+   <div class="col-sm-2" id="attacker">
+   
+   
  </div>
-</div> 
+  <div class="col-sm-8">
+  <img src="\Week 4 Game\Role-Playing-Game\starwars1.jpg">
+   <h1><strong>Cantina Battles</strong></h1>
+
+  <h3>Welcome to the Star Wars role playing game. Two jedi get into a bar fight..</h3>
+
+  <a href="characterscreen.html"><button class="letter-button letter letter-button-color">Click here to begin the game</button></a>
+
+    </div>
+    <div class="col-sm-2">
     
-<script>
+    </div>
+  </div>
+ 
 
-	
-	
+  
 
-     var nfl = ["cardinals", "bears", "packers", "redskins", "eagles","steelers", "rams", "Browns", "colts","chiefs","chargers","broncos", "patriots", "raiders", "titans","bills", "vikings", "falcons", "dolphins", "saints","bengals", "seahawks", "buccaneers","panthers", "jaguars", "ravens", "texans"];
+<div class="footer">
 
-  var word = nfl[Math.floor(Math.random() * nfl.length)];
+</div>
 
-  var answerArray = [];
-  for (var i = 0; i < word.length; i++) {
-    answerArray[i] = "_";
-  }
-	
-  var remainingLetters = word.length;
+<script type="text/javascript">
+// Javascript function wrapping everything as the DOM loads.
+$(document).ready(function(){
 
 
-  while (remainingLetters > 0) {
-    console.log(answerArray.join(" "));
-  }
+$(".character").on("click", function(){
+ ("#attacker")        
 
-  function addLettertoAnswer(letter){ 
-  for(var i=0;i<teamName.length;i++)
-  {
-//    console.log(teamName.length, i, letter, teamName, teamName.charAt(i));
-    // Writing the letter guessed if it is the correct letter
-    if(teamName.charAt(i)==letter){
-    displayName[i]=letter;
-       // If not, number of guesses decreaes
-    }
-        else {
-           remainingLetters--;
-        }
-    document.getElementById("letterline").innerHTML = displayName;
-       
-    }
-         
-    }
+});
 
-console.log(teamName);
-console.log(displayName);
-console.log(userGuess);
-// addLettertoAnswer('e');
-// addLettertoAnswer('a');
-// addLettertoAnswer('t');
-document.getElementById("letterline").innerHTML = displayName;
+</script>
 
+</body>
+</html>
 
 
